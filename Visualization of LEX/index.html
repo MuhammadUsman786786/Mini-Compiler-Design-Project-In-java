@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</html>
+<body>
+    <div class="container">
+        <h1>Compiler Project- Lex Phase Visualizations</h1>
+        <h2>Lexer</h2>
+        <p>The lexer scans source code, looking for tokens. Tokens are matched based on
+        regular expressions, giving preference to longest matches and order. States are used to
+        determine when certain expressions can be matched.</p>
+        <div class="box cf">
+            <div class="half">
+                <h4>Source</h4>
+                <pre class="source" contenteditable>
+Please Insert Code to generate Lex Token Animation
+</pre>
+            </div>
+    <div class="half">
+                <p><b>Input</b>&nbsp;&nbsp;&nbsp;
+                <code class="currentToken"></span></code>
+                <p><b>State</b>&nbsp;&nbsp;&nbsp;
+                <code class="currentState">initial</span></code>
+                <h4>Tokens</h4>
+                <p class="tokens"></p>
+            </div>
+        </div>
+        <div class="controls">
+            <button type="button" id="stopLexing">Stop</button>
+            <button type="button" id="startLexing">Start</button>
+            <button type="button" id="resumeLexing">Resume</button>
+            <label for="speedRange">Speed</label>
+            <input type="range" name="speedRange" id="speedRange" min=1 max=300 step=1 value=50>
+        </div>
+
+        <hr>
+        
+    </div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/lex.js" type="text/javascript"></script>
+
+<script src="js/lexer.js" type="text/javascript"></script>
+
+</body>
