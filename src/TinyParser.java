@@ -63,18 +63,7 @@ public class TinyParser {
 			System.out.println("** Parsing error **");
 		}
 	}*/
-	public static boolean program(){ //program -> stmt-seq
-		if(!stmt_seq()) return false;
-		return true;
-	}
-	public static boolean stmt_seq(){ //stmt-seq -> stmt {; stmt}
-		if(!stmt()) return false;
-		while(token.getType() == SEMICOLON){
-			if(!match(SEMICOLON)) return false;
-			if(!stmt()) return false;
-		}
-		return true;
-	}
+	
 	public static boolean stmt(){	//stmt -> if-stmt | repeat-stmt | assign-stmt | read-stmt | write-stmt
 		//if-stmt
 		if(token.getType() == IFtoken){
